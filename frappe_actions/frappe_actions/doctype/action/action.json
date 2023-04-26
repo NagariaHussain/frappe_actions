@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-26 15:27:45.721575",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "category",
+  "due_date",
+  "column_break_ofgj",
+  "status",
+  "date",
+  "description",
+  "section_break_xswm",
+  "tasks"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "HTML Editor",
+   "label": "Description"
+  },
+  {
+   "default": "ToDo",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "ToDo\nCompleted\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "Action Task"
+  },
+  {
+   "fieldname": "column_break_ofgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xswm",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-26 15:49:13.166932",
+ "modified_by": "Administrator",
+ "module": "Frappe Actions",
+ "name": "Action",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
