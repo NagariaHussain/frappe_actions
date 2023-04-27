@@ -14,7 +14,9 @@
               v-for="action in actions.data"
               :key="action.title"
             >
-              <span>{{ action.title }}</span>
+              <router-link :to="`/actions/${action.name}`">
+                {{ action.title }}
+              </router-link>
               <Button @click="completeAction(action.name)" icon="check" />
             </li>
           </ul>
@@ -82,6 +84,7 @@ const actions = createListResource({
     status: 'ToDo',
   },
   limit: 100,
+
 })
 actions.reload()
 
@@ -91,6 +94,7 @@ const categories = createListResource({
   transform(categories) {
     return categories.map((c) => c.name)
   },
+  cache: 'actions',
 })
 categories.reload()
 
